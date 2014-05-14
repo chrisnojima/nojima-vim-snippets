@@ -1,5 +1,14 @@
-snippet noj
-	${1:class_name}.prototype.${2:method_name} =
-	function(${3:first_argument}) {
-		${0:// body...}
-	};
+snippet class
+	function ${1:class_name}() {
+		${2:base_name}.call(this);
+	}
+
+	util.inherits(${1}, ${2})
+	
+snippet eclass
+	module.exports = ${1};
+	function ${1}() {
+	}
+
+snippet pall
+	${1} = Promise.promisifyAll(${1});
